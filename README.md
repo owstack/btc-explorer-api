@@ -4,6 +4,10 @@ A Bitcoin blockchain REST and web socket API service for [Btccore Node](https://
 
 This is a backend-only service. If you're looking for the web frontend application, take a look at https://github.com/owstack/explorer-ui.
 
+## Attribution
+
+This repository was created by copy forking [insight-api commit 8f4029b](https://github.com/bitpay/insight-api/commit/8f4029b3e5e3b490dc9283febafa9a9ff084dbef).
+
 ## Getting Started
 
 ```bashl
