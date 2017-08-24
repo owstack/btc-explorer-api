@@ -18,7 +18,7 @@ btccore-node install explorer-api
 btccore-node start
 ```
 
-The API endpoints will be available by default at: `http://localhost:3001/explorer-api/`
+The API endpoints will be available by default at: `http://localhost:3001/btccore-explorer-api/`
 
 ## Prerequisites
 
@@ -113,7 +113,7 @@ To protect the server, explorer-api has a built it query rate limiter. It can be
     }
   }
 ```
-With all the configuration options available: https://github.com/owstack/explorer-api/blob/master/lib/ratelimiter.js#L10-17
+With all the configuration options available: https://github.com/owstack/btccore-explorer-api/blob/master/lib/ratelimiter.js#L10-17
 
 Or disabled entirely with:
 ``` json
