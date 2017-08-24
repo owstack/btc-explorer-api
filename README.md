@@ -1,4 +1,4 @@
-# Explorer API
+# Btccore Explorer API
 
 A Bitcoin blockchain REST and web socket API service for [Btccore Node](https://github.com/owstack/btccore-node).
 
