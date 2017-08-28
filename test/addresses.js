@@ -555,7 +555,7 @@ describe('Addresses', function() {
             height: 534232
           }
         },
-        network: 'testnet/btc'
+        network: 'testnet'
       };
 
       var addresses = new AddressController(node);
@@ -692,7 +692,7 @@ describe('Addresses', function() {
             height: 534232
           }
         },
-        network: 'testnet/btc'
+        network: 'testnet'
       };
 
       var addresses = new AddressController(node);
