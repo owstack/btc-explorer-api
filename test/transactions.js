@@ -181,7 +181,7 @@ describe('Transactions', function() {
             height: 534203
           },
         },
-        network: 'testnet/btc'
+        network: 'testnet'
       };
 
       var transactions = new TxController(node);
@@ -361,7 +361,7 @@ describe('Transactions', function() {
             height: 534209
           }
         },
-        network: 'testnet/btc'
+        network: 'testnet'
       };
 
       var transactions = new TxController(node);
@@ -744,7 +744,7 @@ describe('Transactions', function() {
             height: 534223
           }
         },
-        network: 'testnet/btc'
+        network: 'testnet'
       };
 
       var explorer = {
