@@ -1,7 +1,7 @@
 {
   "name": "btccore-explorer-api",
   "description": "A Bitcoin blockchain REST and web socket API service for Btccore Node.",
-  "version": "5.0.0-beta.1",
+  "version": "0.0.1",
   "repository": "git://github.com/owstack/btccore-explorer-api.git",
   "bugs": {
     "url": "https://github.com/owstack/btccore-explorer-api/issues"
