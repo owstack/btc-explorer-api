@@ -21,7 +21,9 @@
     "node": ">=8.2.0"
   },
   "scripts": {
-    "test": "NODE_ENV=test mocha -R spec --recursive"
+    "test": "NODE_ENV=test mocha -R spec --recursive",
+    "regtest": "mocha -R spec regtest",
+    "perf": "mocha -R spec perf"
   },
   "owsNode": "ows-node",
   "dependencies": {
@@ -38,9 +40,13 @@
     "request": "^2.64.0"
   },
   "devDependencies": {
+    "bitcoind-rpc": "git://github.com/owstack/bitcoind-rpc",
+    "btccore-p2p": "git://github.com/owstack/btccore-p2p",
     "chai": "^3.5.0",
+    "mkdirp": "^0.5.1",
     "mocha": "^2.4.5",
     "proxyquire": "^1.7.2",
+    "rimraf": "^2.6.1",
     "should": "^8.3.1",
     "sinon": "^1.10.3"
   }
