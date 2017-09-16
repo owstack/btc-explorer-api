@@ -154,16 +154,12 @@ describe('Status', function() {
         }
       };
 
-      var expected = {
-        connected: true,
-        host: '127.0.0.1',
-        port: null
-      };
-
       var req = {};
       var res = {
         jsonp: function(data) {
-          should(data).eql(expected);
+          should(data.connected).equal(true);
+          should(data.host).match(/^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/);
+          should.not.exist(data.port);
           done();
         }
       };

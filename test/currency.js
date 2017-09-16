@@ -24,8 +24,8 @@ describe('Currency', function() {
     var res = {
       jsonp: function(response) {
         response.status.should.equal(200);
-        should.exist(response.data.bitstamp);
-        (typeof response.data.bitstamp).should.equal('number');
+        should.exist(response.data.rates.USD.rate);
+        (typeof response.data.rates.USD.rate).should.equal('number');
         done();
       }
     };
@@ -42,14 +42,18 @@ describe('Currency', function() {
       }
     };
     var currency = new TestCurrencyController({node: node});
-    currency.bitstampRate = 220.20;
+    currency.rates = {
+      USD: {
+        rate: 220.20
+      }
+    };
     currency.timestamp = Date.now() - 61000 * CurrencyController.DEFAULT_CURRENCY_DELAY;
     var req = {};
     var res = {
       jsonp: function(response) {
         response.status.should.equal(200);
-        should.exist(response.data.bitstamp);
-        response.data.bitstamp.should.equal(237.90);
+        should.exist(response.data.rates.USD.rate);
+        response.data.rates.USD.rate.should.equal(237.90);
         done();
       }
     };
@@ -66,15 +70,19 @@ describe('Currency', function() {
       }
     };
     var currency = new TestCurrencyController({node: node});
-    currency.bitstampRate = 237.90;
+    currency.rates = {
+      USD: {
+        rate: 237.90
+      }
+    };
     currency.timestamp = Date.now() - 65000 * CurrencyController.DEFAULT_CURRENCY_DELAY;
     var req = {};
     var res = {
       jsonp: function(response) {
         response.status.should.equal(200);
-        should.exist(response.data.bitstamp);
-        response.data.bitstamp.should.equal(237.90);
-        node.log.error.callCount.should.equal(1);
+        should.exist(response.data.rates.USD.rate);
+        response.data.rates.USD.rate.should.equal(237.90);
+        node.log.error.called;
         done();
       }
     };
@@ -92,14 +100,18 @@ describe('Currency', function() {
       }
     };
     var currency = new TestCurrencyController({node: node});
-    currency.bitstampRate = 237.90;
+    currency.rates = {
+      USD: {
+        rate: 237.90
+      }
+    };
     currency.timestamp = Date.now();
     var req = {};
     var res = {
       jsonp: function(response) {
         response.status.should.equal(200);
-        should.exist(response.data.bitstamp);
-        response.data.bitstamp.should.equal(237.90);
+        should.exist(response.data.rates.USD.rate);
+        response.data.rates.USD.rate.should.equal(237.90);
         request.callCount.should.equal(0);
         done();
       }
