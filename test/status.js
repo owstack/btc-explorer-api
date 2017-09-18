@@ -8,9 +8,9 @@ describe('Status', function() {
   describe('/status', function() {
     var info = {
       version: 110000,
-      protocolVersion: 70002,
+      protocolversion: 70002,
       blocks: 548645,
-      timeOffset: 0,
+      timeoffset: 0,
       connections: 8,
       difficulty: 21546.906405522557,
       testnet: true,
