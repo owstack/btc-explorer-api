@@ -1,9 +1,9 @@
 Btccore Explorer API
 ======
 
-A Bitcoin blockchain REST and web socket API service for [Btccore Node](https://github.com/owstack/btccore-node).
+A Bitcoin blockchain REST and web socket API service for [OWS Node](https://github.com/owstack/ows-node).
 
-This is a backend-only service. If you're looking for the web frontend application, take a look at https://github.com/owstack/explorer-ui.
+This is a backend-only service. If you're looking for the web frontend application, take a look at https://github.com/owstack/ows-explorer.
 
 ## Attribution
 
@@ -23,7 +23,7 @@ The API endpoints will be available by default at: `http://localhost:3001/btccor
 
 ## Prerequisites
 
-- [Btccore Node](https://github.com/owstack/btccore-node)
+- [OWS Node](https://github.com/owstack/ows-node)
 
 **Note:** You can use an existing Bitcoin data directory, however `txindex`, `addressindex`, `timestampindex` and `spentindex` needs to be set to true in `bitcoin.conf`, as well as a few other additional fields.
 
