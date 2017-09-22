@@ -21,7 +21,7 @@ var Transaction = btccore.Transaction;
 var EventEmitter = require('events').EventEmitter;
 
 /**
- * A service for Btccore to enable HTTP routes to query information about the blockchain.
+ * A service to enable HTTP routes to query information about the blockchain.
  *
  * @param {Object} options
  * @param {Boolean} options.enableCache - This will enable cache-control headers
