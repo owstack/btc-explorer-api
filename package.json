@@ -29,7 +29,7 @@
   "dependencies": {
     "JSONStream": "^1.3.1",
     "async": "*",
-    "bcoin": "1.0.0-beta.14",
+    "bcoin": "1.0.0-beta.12",
     "btccore-lib": "git://github.com/owstack/btccore-lib",
     "btccore-message": "git://github.com/owstack/btccore-message",
     "body-parser": "^1.13.3",
