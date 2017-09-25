@@ -52,7 +52,7 @@ describe('Currency', function() {
     var res = {
       jsonp: function(response) {
         response.status.should.equal(200);
-        should.exist(response.data.rates.USD.rate);
+        should.exist(response.data.rates.USD.rate);        
         response.data.rates.USD.rate.should.equal(237.90);
         done();
       }
@@ -72,7 +72,7 @@ describe('Currency', function() {
     var currency = new TestCurrencyController({node: node});
     currency.rates = {
       USD: {
-        rate: 237.90
+        rate: 448.60
       }
     };
     currency.timestamp = Date.now() - 65000 * CurrencyController.DEFAULT_CURRENCY_DELAY;
@@ -81,7 +81,7 @@ describe('Currency', function() {
       jsonp: function(response) {
         response.status.should.equal(200);
         should.exist(response.data.rates.USD.rate);
-        response.data.rates.USD.rate.should.equal(237.90);
+        response.data.rates.USD.rate.should.equal(448.60);
         node.log.error.called;
         done();
       }
@@ -102,7 +102,7 @@ describe('Currency', function() {
     var currency = new TestCurrencyController({node: node});
     currency.rates = {
       USD: {
-        rate: 237.90
+        rate: 448.60
       }
     };
     currency.timestamp = Date.now();
@@ -111,7 +111,7 @@ describe('Currency', function() {
       jsonp: function(response) {
         response.status.should.equal(200);
         should.exist(response.data.rates.USD.rate);
-        response.data.rates.USD.rate.should.equal(237.90);
+        response.data.rates.USD.rate.should.equal(448.60);
         request.callCount.should.equal(0);
         done();
       }

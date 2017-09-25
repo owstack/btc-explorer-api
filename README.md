@@ -11,7 +11,7 @@ This is a backend-only service. If you're looking for the web frontend applicati
 
 ## Attribution
 
-This repository was created by copy forking [insight-api commit 8f4029b](https://github.com/bitpay/insight-api/commit/8f4029b3e5e3b490dc9283febafa9a9ff084dbef).
+This repository was created by copy forking [explorer-api commit 8f4029b](https://github.com/bitpay/explorer-api/commit/8f4029b3e5e3b490dc9283febafa9a9ff084dbef).
 
 ## Getting Started
 
@@ -53,7 +53,6 @@ Or disabled entirely with:
     }
   }
   ```
-  
 
 ## API HTTP Endpoints
 
