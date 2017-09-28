@@ -1,11 +1,11 @@
-Btccore Explorer API
+Btc Explorer API
 ======
 
-[![NPM Package](https://img.shields.io/npm/v/btccore-explorer-api.svg?style=flat-square)](https://www.npmjs.org/package/btccore-explorer-api)
-[![Build Status](https://img.shields.io/travis/owstack/btccore-explorer-api.svg?branch=master&style=flat-square)](https://travis-ci.org/owstack/btccore-explorer-api)
-[![Coverage Status](https://img.shields.io/coveralls/owstack/btccore-explorer-api.svg?style=flat-square)](https://coveralls.io/r/owstack/btccore-explorer-api)
+[![NPM Package](https://img.shields.io/npm/v/btc-explorer-api.svg?style=flat-square)](https://www.npmjs.org/package/btc-explorer-api)
+[![Build Status](https://img.shields.io/travis/owstack/btc-explorer-api.svg?branch=master&style=flat-square)](https://travis-ci.org/owstack/btc-explorer-api)
+[![Coverage Status](https://img.shields.io/coveralls/owstack/btc-explorer-api.svg?style=flat-square)](https://coveralls.io/r/owstack/btc-explorer-api)
 
-A Bitcoin blockchain REST and web socket API service for [Btccore Node](https://github.com/owstack/btccore-node).
+A Bitcoin blockchain REST and web socket API service for [Btc Node](https://github.com/owstack/btc-node).
 
 This is a backend-only service. If you're looking for the web frontend application, take a look at https://github.com/owstack/ows-explorer.
 
@@ -16,24 +16,24 @@ This repository was created by copy forking [explorer-api commit 8f4029b](https:
 ## Getting Started
 
 ```bashl
-npm install -g btccore-node@latest
-btccore-node create mynode
+npm install -g btc-node@latest
+btc-node create mynode
 cd mynode
-btccore-node install btccore-explorer-api
-btccore-node start
+btc-node install btc-explorer-api
+btc-node start
 ```
 
-The API endpoints will be available by default at: `http://localhost:3001/btccore-explorer-api/`
+The API endpoints will be available by default at: `http://localhost:3001/btc-explorer-api/`
 
 ## Prerequisites
 
-- [Btccore Node](https://github.com/owstack/btccore-node)
+- [Btc Node](https://github.com/owstack/btc-node)
 
 **Note:** You can use an existing Bitcoin data directory, however `txindex`, `addressindex`, `timestampindex` and `spentindex` needs to be set to true in `bitcoin.conf`, as well as a few other additional fields.
 
 ## Query Rate Limit
 
-To protect the server, explorer-api has a built it query rate limiter. It can be configurable in `btccore-node.json` with:
+To protect the server, explorer-api has a built it query rate limiter. It can be configurable in `btc-node.json` with:
 ``` json
   "servicesConfig": {
     "explorer-api": {
@@ -43,7 +43,7 @@ To protect the server, explorer-api has a built it query rate limiter. It can be
     }
   }
 ```
-With all the configuration options available: https://github.com/owstack/btccore-explorer-api/blob/master/lib/ratelimiter.js#L10-17
+With all the configuration options available: https://github.com/owstack/btc-explorer-api/blob/master/lib/ratelimiter.js#L10-17
 
 Or disabled entirely with:
 ``` json

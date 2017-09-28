@@ -14,10 +14,10 @@ var UtilsController = require('../lib/utils');
 var CurrencyController = require('../lib/currency');
 var RateLimiter = require('../lib/ratelimiter');
 var morgan = require('morgan');
-var btccore = require('btccore-lib');
-var _ = btccore.deps._;
-var $ = btccore.util.preconditions;
-var Transaction = btccore.Transaction;
+var btcLib = require('btc-lib');
+var _ = btcLib.deps._;
+var $ = btcLib.util.preconditions;
+var Transaction = btcLib.Transaction;
 var EventEmitter = require('events').EventEmitter;
 
 /**

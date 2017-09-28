@@ -1,12 +1,12 @@
 {
-  "name": "btccore-explorer-api",
-  "description": "A Bitcoin blockchain REST and web socket API service for Btccore.",
+  "name": "btc-explorer-api",
+  "description": "A Bitcoin blockchain REST and web socket API service for Btc.",
   "version": "0.0.1",
-  "repository": "git://github.com/owstack/btccore-explorer-api.git",
+  "repository": "git://github.com/owstack/btc-explorer-api.git",
   "bugs": {
-    "url": "https://github.com/owstack/btccore-explorer-api/issues"
+    "url": "https://github.com/owstack/btc-explorer-api/issues"
   },
-  "homepage": "https://github.com/owstack/btccore-explorer-api",
+  "homepage": "https://github.com/owstack/btc-explorer-api",
   "license": "MIT",
   "keywords": [
     "explorer",
@@ -15,7 +15,7 @@
     "bitcoin api",
     "blockchain api",
     "json",
-    "btccore"
+    "btc"
   ],
   "engines": {
     "node": ">=8.2.0"
@@ -23,12 +23,12 @@
   "scripts": {
     "test": "NODE_ENV=test mocha -R spec --recursive"
   },
-  "main": "btccore-node",
-  "btccoreNode": "btccore-node",
+  "main": "btc-node",
+  "btcNode": "btc-node",
   "dependencies": {
     "async": "*",
-    "btccore-lib": "https://github.com/owstack/btccore-lib",
-    "btccore-message": "https://github.com/owstack/btccore-message",
+    "btc-lib": "https://github.com/owstack/btc-lib",
+    "btc-message": "https://github.com/owstack/btc-message",
     "body-parser": "^1.13.3",
     "compression": "^1.6.1",
     "lodash": "^4.17.4",
