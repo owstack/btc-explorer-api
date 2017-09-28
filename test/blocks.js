@@ -3,7 +3,7 @@
 var should = require('should');
 var sinon = require('sinon');
 var BlockController = require('../lib/blocks');
-var btccore = require('btccore-lib');
+var btcLib = require('btc-lib');
 var _ = require('lodash');
 
 var blocks = require('./data/blocks.json');
@@ -69,11 +69,11 @@ describe('Blocks', function() {
       'poolInfo': {}
     };
 
-    var btccoreBlock = btccore.Block.fromBuffer(new Buffer(blocks['0000000000000afa0c3c0afd450c793a1e300ec84cbe9555166e06132f19a8f7'], 'hex'));
+    var btcBlock = btcLib.Block.fromBuffer(new Buffer(blocks['0000000000000afa0c3c0afd450c793a1e300ec84cbe9555166e06132f19a8f7'], 'hex'));
 
     var node = {
       log: sinon.stub(),
-      getBlock: sinon.stub().callsArgWith(1, null, btccoreBlock),
+      getBlock: sinon.stub().callsArgWith(1, null, btcBlock),
       services: {
         bitcoind: {
           getBlockHeader: sinon.stub().callsArgWith(1, null, blockIndexes['0000000000000afa0c3c0afd450c793a1e300ec84cbe9555166e06132f19a8f7']),
@@ -102,7 +102,7 @@ describe('Blocks', function() {
     });
 
     it('block pool info should be correct', function(done) {
-      var block = btccore.Block.fromString(blocks['000000000000000004a118407a4e3556ae2d5e882017e7ce526659d8073f13a4']);
+      var block = btcLib.Block.fromString(blocks['000000000000000004a118407a4e3556ae2d5e882017e7ce526659d8073f13a4']);
       var node = {
         log: sinon.stub(),
         getBlock: sinon.stub().callsArgWith(1, null, block),

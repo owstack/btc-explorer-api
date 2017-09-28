@@ -2,7 +2,7 @@
 
 var should = require('should');
 var sinon = require('sinon');
-var ExplorerAPI = require('../btccore-node/index');
+var ExplorerAPI = require('../btc-node/index');
 
 describe('Index', function() {
   describe('@constructor', function() {
