@@ -1,7 +1,7 @@
 'use strict';
 var should = require('should');
 var sinon = require('sinon');
-var btcLib = require('btc-lib');
+var btcLib = require('@owstack/btc-lib');
 var TxController = require('../lib/transactions');
 var _ = require('lodash');
 
