@@ -1,7 +1,7 @@
 {
   "name": "@owstack/btc-explorer-api",
   "description": "A Bitcoin blockchain REST and web socket API service for Btc.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": "git://github.com/owstack/btc-explorer-api.git",
   "bugs": {
     "url": "https://github.com/owstack/btc-explorer-api/issues"
@@ -26,9 +26,9 @@
   "main": "btc-node",
   "btcNode": "btc-node",
   "dependencies": {
+    "@owstack/btc-lib": "^0.0.3",
+    "@owstack/btc-message": "^0.0.3",
     "async": "*",
-    "@owstack/btc-lib": "^0.0.2",
-    "@owstack/btc-message": "^0.0.2",
     "body-parser": "^1.13.3",
     "compression": "^1.6.1",
     "lodash": "^4.17.4",
