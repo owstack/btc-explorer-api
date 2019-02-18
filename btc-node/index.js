@@ -155,7 +155,7 @@ ExplorerAPI.prototype.setupRoutes = function(app) {
 
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET, HEAD, PUT, POST, OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Content-Length, Cache-Control, cf-connecting-ip');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Content-Length, Cache-Control, cf-connecting-ip, X-Client-Version');
 
     var method = req.method && req.method.toUpperCase && req.method.toUpperCase();
 
